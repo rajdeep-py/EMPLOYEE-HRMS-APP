@@ -1,4 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Camera: required for check-in/out selfie -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- Location: required for check-in/out GPS coordinates -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- Foreground location for geolocator on Android 10+ -->
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+
     <application
         android:label="employee_app"
         android:name="${applicationName}"

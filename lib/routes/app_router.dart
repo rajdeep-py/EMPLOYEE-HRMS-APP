@@ -9,6 +9,7 @@ import 'package:go_router/go_router.dart';
 import '../providers/auth_provider.dart';
 import '../screens/auth/splash_screen.dart';
 import '../screens/auth/login_screen.dart';
+import '../screens/dashboard/dashboard_screen.dart';
 
 // ─────────────────────────────────────────────
 //  Route paths
@@ -64,7 +65,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: AppRoutes.home,
         name: 'home',
-        builder: (context, state) => const _PlaceholderHome(),
+        builder: (context, state) => const DashboardScreen(),
       ),
     ],
 
@@ -82,21 +83,3 @@ class _AuthChangeNotifier extends ChangeNotifier {
   }
 }
 
-// ─────────────────────────────────────────────
-//  Placeholder home screen (replace when ready)
-// ─────────────────────────────────────────────
-class _PlaceholderHome extends StatelessWidget {
-  const _PlaceholderHome();
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(
-          '🏠 Home Screen',
-          style: Theme.of(context).textTheme.headlineMedium,
-        ),
-      ),
-    );
-  }
-}

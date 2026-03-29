@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<!-- Camera: required for check-in/out selfie -->
+	<key>NSCameraUsageDescription</key>
+	<string>AttendX24 needs camera access to capture your selfie during check-in and check-out.</string>
+	<!-- Microphone: required by image_picker on iOS even when only using camera -->
+	<key>NSMicrophoneUsageDescription</key>
+	<string>AttendX24 requires microphone access as part of camera usage on iOS.</string>
+	<!-- Location: required to record your check-in/out GPS coordinates -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>AttendX24 needs your location to record where you checked in and out.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>AttendX24 needs your location to record where you checked in and out.</string>
+
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
